@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D9BD3571D3FF9A6009CB40E /* LookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9BD3561D3FF9A6009CB40E /* LookupViewController.m */; };
 		0DBBABF61D3D501800F4D322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBABF51D3D501800F4D322 /* main.m */; };
 		0DBBABF91D3D501800F4D322 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBABF81D3D501800F4D322 /* AppDelegate.m */; };
 		0DBBABFC1D3D501800F4D322 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBABFB1D3D501800F4D322 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D9BD3551D3FF9A6009CB40E /* LookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupViewController.h; sourceTree = "<group>"; };
+		0D9BD3561D3FF9A6009CB40E /* LookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupViewController.m; sourceTree = "<group>"; };
 		0DBBABF11D3D501800F4D322 /* Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBBABF51D3D501800F4D322 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DBBABF71D3D501800F4D322 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				0DBBAC461D3D620700F4D322 /* RoomsViewController.m */,
 				0DCA7D5C1D3F27D000B660F9 /* BookViewController.h */,
 				0DCA7D5D1D3F27D000B660F9 /* BookViewController.m */,
+				0D9BD3551D3FF9A6009CB40E /* LookupViewController.h */,
+				0D9BD3561D3FF9A6009CB40E /* LookupViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				0DBBAC3E1D3D5A0600F4D322 /* Room+CoreDataProperties.m in Sources */,
 				0DBBAC3B1D3D5A0600F4D322 /* Guest.m in Sources */,
 				0DBBAC3A1D3D5A0600F4D322 /* Guest+CoreDataProperties.m in Sources */,
+				0D9BD3571D3FF9A6009CB40E /* LookupViewController.m in Sources */,
 				0DBBAC3D1D3D5A0600F4D322 /* Reservation.m in Sources */,
 				0DBBAC401D3D5A0600F4D322 /* Hotel+CoreDataProperties.m in Sources */,
 				0DCA7D611D3F2D0200B660F9 /* AvailabilityViewController.m in Sources */,
