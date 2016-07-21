@@ -12,6 +12,7 @@
 #import "Room.h"
 #import "Hotel.h"
 #import "BookViewController.h"
+#import "ReservationService.h"
 
 @interface AvailabilityViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -74,27 +75,9 @@
 }
 
 -(NSArray *)datasource {
-    if(!_datasource) {
-        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservation"];
-        request.predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND endDate >= %@", self.endDate, self.startDate];
-        
-        NSArray *results = [delegate.managedObjectContext executeFetchRequest:request error:nil];
-        
-        NSMutableArray *unavailableRooms = [[NSMutableArray alloc]init];
-        
-        for (Reservation *reservation in results) {
-            [unavailableRooms addObject:reservation.room];
-        }
-        
-        NSFetchRequest *checkRequest = [NSFetchRequest fetchRequestWithEntityName:@"Room"];
-        
-        checkRequest.predicate = [NSPredicate predicateWithFormat:@"NOT self IN %@", unavailableRooms];
-        
-        _datasource = [delegate.managedObjectContext executeFetchRequest:checkRequest error:nil];
+    if (!_datasource) {
+        _datasource = [ReservationService reservationService:self.startDate endDate:self.endDate];
     }
-    
     return _datasource;
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D412F6F1D406BF900B3F4F5 /* ReservationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D412F6E1D406BF900B3F4F5 /* ReservationService.m */; };
+		0D412F771D4074A600B3F4F5 /* ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D412F761D4074A600B3F4F5 /* ManagerTests.m */; };
 		0D9BD3571D3FF9A6009CB40E /* LookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9BD3561D3FF9A6009CB40E /* LookupViewController.m */; };
 		0DBBABF61D3D501800F4D322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBABF51D3D501800F4D322 /* main.m */; };
 		0DBBABF91D3D501800F4D322 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBABF81D3D501800F4D322 /* AppDelegate.m */; };
@@ -33,7 +35,22 @@
 		0DCA7D641D3F337600B660F9 /* NSObject+NSManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCA7D621D3F337600B660F9 /* NSObject+NSManagedObjectContext.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0D412F791D4074A600B3F4F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DBBABE91D3D501800F4D322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DBBABF01D3D501800F4D322;
+			remoteInfo = Manager;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0D412F6D1D406BF900B3F4F5 /* ReservationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationService.h; sourceTree = "<group>"; };
+		0D412F6E1D406BF900B3F4F5 /* ReservationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationService.m; sourceTree = "<group>"; };
+		0D412F741D4074A600B3F4F5 /* ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D412F761D4074A600B3F4F5 /* ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerTests.m; sourceTree = "<group>"; };
+		0D412F781D4074A600B3F4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D9BD3551D3FF9A6009CB40E /* LookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupViewController.h; sourceTree = "<group>"; };
 		0D9BD3561D3FF9A6009CB40E /* LookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupViewController.m; sourceTree = "<group>"; };
 		0DBBABF11D3D501800F4D322 /* Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D412F711D4074A600B3F4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DBBABEE1D3D501800F4D322 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,10 +114,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D412F751D4074A600B3F4F5 /* ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D412F761D4074A600B3F4F5 /* ManagerTests.m */,
+				0D412F781D4074A600B3F4F5 /* Info.plist */,
+			);
+			path = ManagerTests;
+			sourceTree = "<group>";
+		};
 		0DBBABE81D3D501800F4D322 = {
 			isa = PBXGroup;
 			children = (
 				0DBBABF31D3D501800F4D322 /* Manager */,
+				0D412F751D4074A600B3F4F5 /* ManagerTests */,
 				0DBBABF21D3D501800F4D322 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				0DBBABF11D3D501800F4D322 /* Manager.app */,
+				0D412F741D4074A600B3F4F5 /* ManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +226,8 @@
 				0DBBAC381D3D5A0600F4D322 /* Hotel.h */,
 				0DBBAC391D3D5A0600F4D322 /* Hotel.m */,
 				0DBBAC001D3D501800F4D322 /* Manager.xcdatamodeld */,
+				0D412F6D1D406BF900B3F4F5 /* ReservationService.h */,
+				0D412F6E1D406BF900B3F4F5 /* ReservationService.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,6 +235,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D412F731D4074A600B3F4F5 /* ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D412F7B1D4074A600B3F4F5 /* Build configuration list for PBXNativeTarget "ManagerTests" */;
+			buildPhases = (
+				0D412F701D4074A600B3F4F5 /* Sources */,
+				0D412F711D4074A600B3F4F5 /* Frameworks */,
+				0D412F721D4074A600B3F4F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D412F7A1D4074A600B3F4F5 /* PBXTargetDependency */,
+			);
+			name = ManagerTests;
+			productName = ManagerTests;
+			productReference = 0D412F741D4074A600B3F4F5 /* ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0DBBABF01D3D501800F4D322 /* Manager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBBAC0B1D3D501800F4D322 /* Build configuration list for PBXNativeTarget "Manager" */;
@@ -224,6 +279,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Erin Roby";
 				TargetAttributes = {
+					0D412F731D4074A600B3F4F5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0DBBABF01D3D501800F4D322;
+					};
 					0DBBABF01D3D501800F4D322 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -243,11 +302,19 @@
 			projectRoot = "";
 			targets = (
 				0DBBABF01D3D501800F4D322 /* Manager */,
+				0D412F731D4074A600B3F4F5 /* ManagerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D412F721D4074A600B3F4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DBBABEF1D3D501800F4D322 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +330,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D412F701D4074A600B3F4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D412F771D4074A600B3F4F5 /* ManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DBBABED1D3D501800F4D322 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,11 +360,20 @@
 				0DBBAC471D3D620700F4D322 /* RoomsViewController.m in Sources */,
 				0DCA7D641D3F337600B660F9 /* NSObject+NSManagedObjectContext.m in Sources */,
 				0DBBABF61D3D501800F4D322 /* main.m in Sources */,
+				0D412F6F1D406BF900B3F4F5 /* ReservationService.m in Sources */,
 				0DBBAC021D3D501800F4D322 /* Manager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D412F7A1D4074A600B3F4F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DBBABF01D3D501800F4D322 /* Manager */;
+			targetProxy = 0D412F791D4074A600B3F4F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0DBBAC051D3D501800F4D322 /* LaunchScreen.storyboard */ = {
@@ -303,6 +387,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0D412F7C1D4074A600B3F4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Erin-Roby.ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manager.app/Manager";
+			};
+			name = Debug;
+		};
+		0D412F7D1D4074A600B3F4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Erin-Roby.ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manager.app/Manager";
+			};
+			name = Release;
+		};
 		0DBBAC091D3D501800F4D322 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -414,6 +522,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D412F7B1D4074A600B3F4F5 /* Build configuration list for PBXNativeTarget "ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D412F7C1D4074A600B3F4F5 /* Debug */,
+				0D412F7D1D4074A600B3F4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0DBBABEC1D3D501800F4D322 /* Build configuration list for PBXProject "Manager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -14,33 +14,12 @@
 
 @interface HotelsViewController () <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
-//@property (strong, nonatomic) NSArray *datasource;
 @property (strong, nonatomic)NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) UITableView *tableView;
 
 @end
 
 @implementation HotelsViewController
-
-//- (NSArray *)datasource {
-//    if (!_datasource) {
-//        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-//        NSManagedObjectContext *context = delegate.managedObjectContext;
-//        
-//        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Hotel"];
-//        
-//        NSError *fetchError;
-//        
-//        _datasource = [context executeFetchRequest:request error:&fetchError];
-//        
-//        if (fetchError) {
-//            NSLog(@"Error fetching from Core Data.");
-//        }
-//        
-//    }
-//    
-//    return _datasource; // instance variable you got for free when you create property!
-//}
 
 -(NSFetchedResultsController *)fetchedResultsController {
     if (!_fetchedResultsController) {
@@ -127,10 +106,6 @@
 
 #pragma mark - UITableViewDataSource
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.datasource.count;
-//}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ([[self.fetchedResultsController sections]count] > 0) {
         id<NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
@@ -148,7 +123,6 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-//    Hotel *hotel = self.datasource[indexPath.row];
     Hotel *hotel = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = hotel.name;
     
@@ -184,7 +158,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    Hotel *hotel = self.datasource[indexPath.row];
     Hotel *hotel = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSLog(@"%@", hotel.rooms);
     RoomsViewController *roomsViewController = [[RoomsViewController alloc]init];

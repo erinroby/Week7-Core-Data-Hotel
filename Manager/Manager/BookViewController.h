@@ -12,6 +12,7 @@
 #import "Hotel.h"
 #import "Reservation.h"
 #import "Guest.h"
+#import "ReservationService.h"
 
 @interface BookViewController : UIViewController
 

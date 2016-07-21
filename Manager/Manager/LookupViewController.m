@@ -110,6 +110,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 44.0)];
     searchBar.delegate = self;
+    searchBar.placeholder = @"last name here";
     return searchBar;
 }
 
@@ -121,7 +122,15 @@
     NSError *error;
     NSArray *results = [[NSObject managerContext]executeFetchRequest:request error:&error];
     
-    // if results equals nil, alert the user here.
+    if (results == NULL) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"oh no!"  message:@"no results for that last name." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *noResultsAction = [UIAlertAction actionWithTitle:@"Please try again." style:UIAlertActionStyleDefault handler:nil];
+        
+        [alert addAction:noResultsAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        return;
+    }
     
     if (error) {
         NSLog(@"Error: %@", error.localizedDescription);
