@@ -175,7 +175,7 @@
 }
 
 -(void)saveButtonSelected:(UIBarButtonItem *)sender {
-    Reservation *reservation = [Reservation reservationWithStartDate:[NSDate date] endDate:self.endDate room:self.room];
+    Reservation *reservation = [Reservation reservationWithStartDate:self.startDate endDate:self.endDate room:self.room];
     self.room.reservation = reservation;
     
     NSError *error;
