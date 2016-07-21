@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "HotelsViewController.h"
+#import "DateViewController.h"
+#import "AppDelegate.h"
+#import "LookupViewController.h"
 
 @interface ViewController ()
 
@@ -23,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupViewController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +35,17 @@
 
 - (void) setupViewController {
     [self.navigationItem setTitle:@"H & M"];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
+    NSArray *guests = [context executeFetchRequest:request error:nil];
+    
+    NSLog(@"Guests: %li", guests.count);
 }
 
 - (void) setupCustomLayout {
@@ -44,13 +59,13 @@
     [bookButton setTitle:@"Book" forState:UIControlStateNormal];
     [lookupButton setTitle:@"Lookup" forState:UIControlStateNormal];
     
-    [browseButton setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:0.76 alpha:1.0]];
-    [bookButton setBackgroundColor:[UIColor colorWithRed:1.0 green:0.91 blue:0.76 alpha:1.0]];
-    [lookupButton setBackgroundColor:[UIColor colorWithRed:0.85 green:0.91 blue:0.76 alpha:1.0]];
+    [browseButton setBackgroundColor:[UIColor colorWithRed:0.54 green:0.02 blue:0.24 alpha:1.0]];
+    [bookButton setBackgroundColor:[UIColor colorWithRed:0.70 green:0.67 blue:0.95 alpha:1.0]];
+    [lookupButton setBackgroundColor:[UIColor colorWithRed:0.11 green:0.19 blue:0.25 alpha:1.0]];
     
-    [browseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [browseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [bookButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [lookupButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [lookupButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [browseButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [bookButton setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -183,11 +198,11 @@
 }
 
 - (void)bookButtonSelected:(UIButton *)sender {
-    NSLog(@"Book...");
+    [self.navigationController pushViewController:[[DateViewController alloc]init] animated:YES];
 }
 
 - (void)lookupButtonSelected:(UIButton *)sender {
-    NSLog(@"Lookup...");
+    [self.navigationController pushViewController:[[LookupViewController alloc]init] animated:YES];
 }
 
 @end
